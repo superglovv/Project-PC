@@ -1,8 +1,8 @@
-# Proiect PC1
+# Book-A-Flight-Inator
 
-Înlocuiți titlul cu titlul proiectului vostru și adăugați o scurtă descriere.
+Proiectul meu consta intr-o aplicatie de rezervare de bilete de avion.
 
 ## Resurse
 
-- Adăugați trimiteri către resursele externe care v-au ajutat sau pe care le-ați folosit.
+- [fisierul cu zborurile rezervate] (https://github.com/superglovv/Project-PC/blob/main/record.txt)
 - [rlutil](https://github.com/tapio/rlutil/tree/821fdca0191b314ee07b0fad2abe4ea973e45575) (WTFPL)
