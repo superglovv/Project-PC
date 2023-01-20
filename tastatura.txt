@@ -1,2 +1,2 @@
-3
-1 2 3
+Alex Alex		  0725650777	  alex@alex.ro		  1234567891234		Romania	  Anglia
+Eric Eric		  0727654789	  erik@mail.ro		  1234567891235		Romania	  Spain
