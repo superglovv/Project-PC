@@ -34,7 +34,7 @@ enum {
 int main()
 {
 
-    /*int var;
+    int var;
     printf("\t\tWelcome:\n");
     printf("\n\n\t\t1 for Log in:\n");
     printf("\t\t2 for Sign up:\n");
@@ -44,7 +44,7 @@ int main()
     {
         case 1: auth(); break;
         case 2: signup(); break;
-    }*/ menu();
+    }
 
 }
 
