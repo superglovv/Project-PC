@@ -183,7 +183,7 @@ int login()
 
 void auth()
 {
-    while(login()!=1)
+    while(login()!=1 && sleep(100))
     {
         cls();
         printf("Wrong username or password!\n");
