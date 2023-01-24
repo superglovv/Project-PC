@@ -79,7 +79,7 @@ void signup()
      scanf("%10s", v[i].nume);
 
     printf("\t\tPassword (minimum 3 characters): ");
-	char last_char;        while(isspace(last_char = getch()));        ungetc(last_char, stdin);
+	char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
      for(i=0; i <NR1-1;i++)
     {
         char c;
@@ -144,7 +144,7 @@ int login()
             return 0;
         int j=i;
         printf("\t\tPassword: ");
-	char last_char;        while(isspace(last_char = getch()));        ungetc(last_char, stdin);
+	char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
     for(i=0; i <NR1-1;i++)
     {
         char c;
