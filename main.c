@@ -91,14 +91,14 @@ void signup()
             i-= 2;
             continue;
         }
-        else if( parola[i] != '\r' && parola[i] != '\n')
+        else if ( parola[i] == '\b' && i == 0)
         {
             i--;
             printf("\b \b");
             printf(" ");
             continue;
         }
-        else if( v[i].parola[i] != '\r')
+        else if( parola[i] != '\r' && parola[i] != '\n')
             printf("*");
         else
             break;
@@ -144,6 +144,7 @@ int login()
             return 0;
         int j=i;
         printf("\t\tPassword: ");
+	char last_char;        while(isspace(last_char = getch()));        ungetc(last_char, stdin);
     for(i=0; i <NR1-1;i++)
     {
         char c;
@@ -162,7 +163,7 @@ int login()
             printf(" ");
             continue;
         }
-        else if( parola[i] != '\r')
+        else if( parola[i] != '\r' && parola[i] != '\n')
             printf("*");
         else
             break;
