@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include <ctype.h>
 #include<time.h>
 
 #define BUFFER_SIZE 1000
@@ -78,6 +79,7 @@ void signup()
      scanf("%10s", v[i].nume);
 
     printf("\t\tPassword (minimum 3 characters): ");
+	char last_char;        while(isspace(last_char = getch()));        ungetc(last_char, stdin);
      for(i=0; i <NR1-1;i++)
     {
         char c;
@@ -89,7 +91,7 @@ void signup()
             i-= 2;
             continue;
         }
-        else if ( v[i].parola[i] == '\b' && i == 0)
+        else if( parola[i] != '\r' && parola[i] != '\n')
         {
             i--;
             printf("\b \b");
