@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include <ctype.h>
 #include<time.h>
 
 #define BUFFER_SIZE 1000
@@ -79,9 +78,8 @@ void signup()
      scanf("%10s", v[i].nume);
 
     printf("\t\tPassword (minimum 3 characters): ");
-    scanf("%10s", v[i].parola);
-	/*char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
-     for(i=0; i <NR1-1;i++)
+	scanf("%10s", v[i].parola);
+     /*for(i=0; i <NR1-1;i++)
     {
         char c;
         c = getch(); printf("%d %c \n", c, c);
@@ -92,14 +90,14 @@ void signup()
             i-= 2;
             continue;
         }
-        else if ( v[i].parola == '\b' && i == 0)
+        else if ( v[i].parola[i] == '\b' && i == 0)
         {
             i--;
             printf("\b \b");
             printf(" ");
             continue;
         }
-        else if( v[i].parola != '\r' && v[i].parola != '\n')
+        else if( v[i].parola[i] != '\r')
             printf("*");
         else
             break;
@@ -145,7 +143,6 @@ int login()
             return 0;
         int j=i;
         printf("\t\tPassword: ");
-	char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
     for(i=0; i <NR1-1;i++)
     {
         char c;
@@ -164,7 +161,7 @@ int login()
             printf(" ");
             continue;
         }
-        else if( parola[i] != '\r' && parola[i] != '\n')
+        else if( parola[i] != '\r')
             printf("*");
         else
             break;
@@ -411,7 +408,7 @@ void update()
             scanf("\n %20s", s.from);
             fputs(s.from,tempfile);fprintf(tempfile,"\t");
             printf("\nTo:");
-            scanf("\n %19s", s.to);
+            scanf("\n %20s", s.to);
             fputs(s.to,tempfile);fprintf(tempfile,"\n");
             char dela[100], la[100];
             int cand; int v[100], r=0;
