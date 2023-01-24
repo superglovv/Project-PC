@@ -1,6 +1,6 @@
-#include<rlutil.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include"rlutil.h"
 #include<string.h>
 #include<time.h>
 
@@ -34,7 +34,7 @@ enum {
 int main()
 {
 
-    int var;
+    /*int var;
     printf("\t\tWelcome:\n");
     printf("\n\n\t\t1 for Log in:\n");
     printf("\t\t2 for Sign up:\n");
@@ -44,7 +44,7 @@ int main()
     {
         case 1: auth(); break;
         case 2: signup(); break;
-    }
+    }*/ menu();
 
 }
 
@@ -365,7 +365,6 @@ void update()
     struct Customer s;
     FILE* file, *tempfile;
     char buffer[BUFFER_SIZE];
-    char newline[BUFFER_SIZE]={};
     int line, count;
 
     printf("\n\tFlight number: ");
@@ -446,7 +445,6 @@ void update()
 
 void delete()
 {
-    struct Customer s;
     FILE* file, *tempfile;
     char buffer[BUFFER_SIZE];
     char newline[BUFFER_SIZE]={};
