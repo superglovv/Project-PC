@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
+#include <ctype.h>
 
 #define BUFFER_SIZE 1000
 #define NR1 20
