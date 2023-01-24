@@ -1,6 +1,6 @@
+#include<rlutil.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include"rlutil.h"
 #include<string.h>
 #include<time.h>
 
@@ -20,9 +20,6 @@ void signup();
 
 struct Customer{
 	char fname[20], lname[20], phonenumber[20], email[20], address[24], id[20], from[20], to[20], class[20];
-	struct date{
-		int hour, minutes;
-	}dat;
 };
 
 enum {
@@ -37,7 +34,7 @@ enum {
 int main()
 {
 
-    /*int var;
+    int var;
     printf("\t\tWelcome:\n");
     printf("\n\n\t\t1 for Log in:\n");
     printf("\t\t2 for Sign up:\n");
@@ -47,7 +44,7 @@ int main()
     {
         case 1: auth(); break;
         case 2: signup(); break;
-    }*/ menu();
+    }
 
 }
 
@@ -242,20 +239,22 @@ void create()
 {
     struct Customer s;
     FILE* f = fopen("record.txt", "a+");
-    FILE* g = fopen("record.txt", "r");
+    //FILE* g = fopen("record.txt", "r");
     FILE* h = fopen("flights.txt", "r"); 
     //n++; fseek(f,0, SEEK_SET); fprintf(f,"%d",n);
     
     int i=0, n;
-	char singleline[1023]; fscanf(g,"%d",&n);
+	char singleline[1023]; fscanf(f,"%d",&n);
     int obs=0;
-    while (!feof(g))
+    while (!feof(f))
     {
-        fgets(singleline, 1023, g);
+        fgets(singleline, 1023, f);
         obs++;
     }fprintf(f,"\n%d  ", obs); 
     //fprintf(f,"\n ");
 
+    fseek(f,0,SEEK_SET);
+    
     printf("\nCustomer Details:");
 	printf("\n-------------------------------\n");
 	printf("\nFirst Name:");
@@ -314,7 +313,6 @@ void create()
 	printf("\nYour Flight Number is:\t %d", obs); 
 
     fclose(f);
-    fclose(g);
     fclose(h);
 
 }
@@ -379,7 +377,9 @@ void update()
     tempfile = fopen("replace.tmp", "w+");
 
 
-    count = 0; fflush(stdin);
+    count = 0; 
+	int c;
+	while ((c = getchar()) != '\n' && c != EOF);
     while ((fgets(buffer, BUFFER_SIZE, file)) != NULL)
     {
         count++; 
