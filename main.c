@@ -40,7 +40,9 @@ int main()
     printf("\n\n\t\t1 for Log in:\n");
     printf("\t\t2 for Sign up:\n");
     printf("\n\t\tYour choice:\t");
-    scanf(" %d", &var);
+	
+    scanf("%d", &var);
+	
     switch(var)
     {
         case 1: auth(); break;
