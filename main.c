@@ -407,7 +407,7 @@ void update()
             scanf("\n %20s", s.from);
             fputs(s.from,tempfile);fprintf(tempfile,"\t");
             printf("\nTo:");
-            scanf("\n %20s", s.to);
+            scanf("\n %21s", s.to);
             fputs(s.to,tempfile);fprintf(tempfile,"\n");
             char dela[100], la[100];
             int cand; int v[100], r=0;
