@@ -19,7 +19,7 @@ void menu();
 void signup();
 
 struct Customer{
-	char fname[20], lname[20], phonenumber[20], email[20], address[24], id[20], from[20], to[20];// class[20];
+	char fname[20], lname[20], phonenumber[20], email[20], id[20], from[20], to[20];// class[20];
 };
 
 enum {
