@@ -79,7 +79,8 @@ void signup()
      scanf("%10s", v[i].nume);
 
     printf("\t\tPassword (minimum 3 characters): ");
-	char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
+    scanf("%10s", v[i].parola);
+	/*char last_char; while(isspace(last_char = getch())); ungetc(last_char, stdin);
      for(i=0; i <NR1-1;i++)
     {
         char c;
@@ -110,7 +111,7 @@ void signup()
          fprintf(g,"%10s",v[i].nume);
          fprintf(g,"%10s",v[i].parola);
          printf("%10s",v[i].parola);
-     }
+     }*/
      /*char nam[NR1], pa[NR1];
      scanf("%10s", nam);
      scanf("%10s", pa);
