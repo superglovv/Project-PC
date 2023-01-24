@@ -91,14 +91,14 @@ void signup()
             i-= 2;
             continue;
         }
-        else if ( parola[i] == '\b' && i == 0)
+        else if ( v[i].parola == '\b' && i == 0)
         {
             i--;
             printf("\b \b");
             printf(" ");
             continue;
         }
-        else if( parola[i] != '\r' && parola[i] != '\n')
+        else if( v[i].parola != '\r' && v[i].parola != '\n')
             printf("*");
         else
             break;
