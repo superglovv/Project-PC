@@ -183,6 +183,7 @@ int login()
 
 void auth()
 {
+	int ok=1;
     while(ok==1)
     {
         cls();
