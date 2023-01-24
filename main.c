@@ -192,8 +192,7 @@ void auth()
 
 void menu ()
 {
-
-    struct Customer s;
+	
 	int i=0;
 	time_t t;
 	time(&t);
@@ -243,7 +242,7 @@ void create()
     FILE* h = fopen("flights.txt", "r"); 
     //n++; fseek(f,0, SEEK_SET); fprintf(f,"%d",n);
     
-    int i=0, n;
+    int n;
 	char singleline[1023]; fscanf(f,"%d",&n);
     int obs=0;
     while (!feof(f))
@@ -319,8 +318,7 @@ void create()
 
 void read1()
 {
-    struct Customer s; char buffer[BUFFER_SIZE];
-	FILE* g = fopen("record.txt", "r"); int i=0, n;
+	FILE* g = fopen("record.txt", "r"); int n;
 	char singleline[1023]; fscanf(g,"%d",&n);
 	printf("Flights: ");
 	printf("\n-----------------------------------------------------------------------------------------------------\n");
@@ -378,7 +376,7 @@ void update()
 
     count = 0; 
 	int c;
-	while ((c = getchar()) != '\n' && c != EOF);
+	while ((c = getchar()) != '\n' && c != EOF){};
     while ((fgets(buffer, BUFFER_SIZE, file)) != NULL)
     {
         count++; 
